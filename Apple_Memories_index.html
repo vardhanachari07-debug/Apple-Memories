@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#fff0f5" />
+  <title>Apple 🍎 | Our Little Memories</title>
+  <style>
+    :root {
+      --pink: #f7a8c4;
+      --rose: #d85b88;
+      --ink: #503444;
+      --paper: #fffafc;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0; color: var(--ink);
+      font-family: "Trebuchet MS", Arial, sans-serif;
+      background:
+        radial-gradient(circle at 12px 12px, #f4c8d9 1.5px, transparent 2px) 0 0/34px 34px,
+        linear-gradient(135deg, #fff8fb, #fff0f5 55%, #fff9f1);
+    }
+    .hero {
+      min-height: 78vh; display: grid; place-items: center; text-align: center;
+      padding: 72px 20px 56px; position: relative; overflow: hidden;
+    }
+    .hero::before, .hero::after {
+      content: "♥"; position: absolute; color: #ed9dbb88;
+      font-size: clamp(70px, 15vw, 150px); animation: float 5s ease-in-out infinite;
+    }
+    .hero::before { left: 7%; top: 16%; }
+    .hero::after { right: 8%; bottom: 12%; animation-delay: 1.5s; }
+    .hero-inner { max-width: 760px; position: relative; z-index: 1; }
+    .eyebrow { letter-spacing: 4px; text-transform: uppercase; color: var(--rose); font-size: 12px; }
+    h1 { font-family: Georgia, serif; font-size: clamp(56px, 12vw, 104px); margin: 14px 0 8px; color: #c94f80; }
+    .subtitle { font-family: Georgia, serif; font-size: clamp(20px, 4vw, 30px); margin: 0 0 16px; }
+    .intro { max-width: 540px; margin: auto; line-height: 1.8; color: #795b6b; }
+    .scroll { display: inline-block; margin-top: 30px; color: white; background: var(--rose); text-decoration: none; padding: 13px 24px; border-radius: 999px; box-shadow: 0 8px 22px #d85b8840; }
+    main { width: min(1080px, 92%); margin: 0 auto 70px; }
+    .section-title { text-align: center; font: 34px Georgia, serif; margin: 25px 0 8px; }
+    .section-note { text-align: center; color: #987587; margin: 0 0 34px; }
+    .grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 28px; }
+    .card {
+      background: var(--paper); border: 1px solid #f3d8e3; border-radius: 22px;
+      padding: 14px 14px 22px; box-shadow: 0 14px 35px #8e496315;
+      transform: rotate(var(--tilt, 0deg)); transition: transform .25s, box-shadow .25s;
+    }
+    .card:hover { transform: translateY(-6px) rotate(0); box-shadow: 0 18px 38px #8e496326; }
+    .photo-wrap { overflow: hidden; border-radius: 14px; background: #f8e6ee; }
+    .photo-wrap img { width: 100%; height: 440px; object-fit: cover; display: block; }
+    .tag { display: inline-block; margin: 17px 0 7px; color: #c34f7d; font-size: 12px; font-weight: bold; letter-spacing: 1.5px; text-transform: uppercase; }
+    h2 { font: 26px Georgia, serif; margin: 0 0 10px; }
+    .caption { line-height: 1.75; margin: 0; color: #725667; font-size: 16px; }
+    .final-note {
+      text-align: center; margin: 55px auto 0; padding: 35px 22px;
+      max-width: 760px; border-radius: 24px; background: #fffafcdd;
+      border: 1px solid #f1d2df; box-shadow: 0 12px 30px #8e496312;
+    }
+    .final-note h2 { color: #c94f80; font-size: 32px; }
+    .final-note p { line-height: 1.8; }
+    footer { text-align: center; color: #a17d90; padding: 10px 20px 35px; font-size: 13px; }
+    .heart { color: #d85b88; }
+    @keyframes float { 0%,100% { transform: translateY(0) rotate(-8deg); } 50% { transform: translateY(-18px) rotate(8deg); } }
+    @media (max-width: 700px) {
+      .grid { grid-template-columns: 1fr; gap: 22px; }
+      .photo-wrap img { height: auto; max-height: 580px; object-fit: cover; }
+      .card { transform: none; }
+      .hero { min-height: 68vh; }
+    }
+  </style>
+</head>
+<body>
+  <header class="hero">
+    <div class="hero-inner">
+      <div class="eyebrow">A little corner of my heart</div>
+      <h1>Apple 🍎</h1>
+      <p class="subtitle">My favourite person, my favourite memories.</p>
+      <p class="intro">Konni photos, konni silly moments, chala memories… and every picture has a little story. This tiny website is just for you. ❤️</p>
+      <a class="scroll" href="#memories">Our memories ↓</a>
+    </div>
+  </header>
+
+  <main id="memories">
+    <h2 class="section-title">A few sides of you ✨</h2>
+    <p class="section-note">Four photos. Four moods. One very special person.</p>
+
+    <section class="grid">
+      <article class="card" style="--tilt:-1deg">
+        <div class="photo-wrap"><img src="images/funny.jpg" alt="Apple's funny photo"></div>
+        <span class="tag">01 · Funny 😂</span>
+        <h2>Innocent aa? Sure? 😂</h2>
+        <p class="caption">Ee photo chusthe innocent anipisthundhi… kaani actual character naaku maatrame telusu!</p>
+      </article>
+
+      <article class="card" style="--tilt:1deg">
+        <div class="photo-wrap"><img src="images/beautiful.jpg" alt="Apple's beautiful photo"></div>
+        <span class="tag">02 · Beautiful 😍</span>
+        <h2>Words are not enough</h2>
+        <p class="caption">Thanani describe cheyyadaniki words saripovu… konni feelings ni just feel avvali.</p>
+      </article>
+
+      <article class="card" style="--tilt:1deg">
+        <div class="photo-wrap"><img src="images/comedy.jpg" alt="Apple's comedy photo"></div>
+        <span class="tag">03 · Comedy 🤣</span>
+        <h2>Madam's expressions!</h2>
+        <p class="caption">Madam expression chusthe edho serious matter anipisthundhi… but reason enti ante naaku kuda telidhu!</p>
+      </article>
+
+      <article class="card" style="--tilt:-1deg">
+        <div class="photo-wrap"><img src="images/special.jpg" alt="A special memory together"></div>
+        <span class="tag">04 · Special memories ❤️</span>
+        <h2>Us, in one frame</h2>
+        <p class="caption">Na life lo chala memories unnayi, kaani thanatho create chesina memories konchem special.</p>
+      </article>
+    </section>
+
+    <section class="final-note">
+      <h2>One little note for you, Apple 🍎</h2>
+      <p>Ee website chinna gift maatrame… but indhulo unna memories naaku chaala precious. Thanks for being part of my story. ❤️</p>
+      <p><strong>With love, Vardhan</strong></p>
+      <div class="heart">♥ ♥ ♥</div>
+    </section>
+  </main>
+  <footer>Made with care by Vardhan · Apple 🍎 × Vardhan ❤️</footer>
+</body>
+</html>
